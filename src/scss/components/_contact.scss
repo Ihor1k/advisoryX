@@ -1,0 +1,183 @@
+.contact {
+    margin-top: 180px;
+    padding-top: 60px;
+    position: relative;
+}
+
+.contact .video {
+    top: 200px;  
+}
+
+.contact .video video {
+    width: 100%;
+}
+
+.contact-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(6.5px);
+    border-radius: 26px;
+    border: 1px solid var(--neutral-700, #1F1F1F);
+    padding: 56px;
+    @media screen and (max-width: 480px) {
+        padding: 65px 16px;   
+    }
+  }
+  
+.contact-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-context {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+    
+.contact-context h3 {
+    color: var(--neutral-200, #FFF);
+    font-family: Manrope;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: -1.76px;
+    text-align: center;
+    // text-transform: uppercase;
+    margin-bottom: 16px;
+    max-width: 645px;
+    @media screen and (max-width: 480px) {
+        font-size: 40px;       
+    }
+}
+  
+.contact-context p {
+    color: var(--neutral-400, #959595);
+    text-align: center;
+    font-family: Urbanist;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 33.6px */
+    text-align: center;
+    max-width: 645px;
+    width: 100%;
+
+    margin-bottom: 30px;
+    @media screen and (max-width: 480px) {
+        margin-bottom: 40px;
+    }
+}
+    
+/* Форма */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin: 0 0 12px 0;
+    @media screen and (max-width: 480px) {
+        width: 100%;   
+        gap: 10px;
+    }
+}
+    
+.form-field {
+    display: flex;
+    flex-direction: column;
+    // gap: 2px;
+    width: 100%;
+}
+    
+.contact-form input,  .contact-form textarea {
+    border-radius: 12px;
+    border: 1px solid var(--neutral-700, #1F1F1F);
+    background: rgba(255, 255, 255, 0.06);
+    /* Drop Shadow */
+    // box-shadow: 4px -4px 30px 0 rgba(0, 0, 0, 0.06);
+    padding: 14px 12px;
+    color: var(--neutral-300, #C4C4C4);
+    font-family: Urbanist;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 132%; /* 18.48px */
+    outline: none;
+    width: 100%;
+    resize: none;
+    transition: all 300ms ease-in-out;
+    // opacity: .6;
+    @media screen and (max-width: 480px) {
+        width: 100% !important;
+    }
+}
+  
+.contact-form input:focus, .contact-form textarea:focus {
+    border-radius: 12px;
+    border: 1px solid var(--primary-light, #877EFF);
+    background: rgba(255, 255, 255, 0.06);
+    opacity: 1;
+    /* green */
+}
+  
+    
+.contact-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @media screen and (max-width: 480px) {
+        width: 100%;   
+    }
+}
+    
+/* Кнопка */
+.contact-btn { 
+    width: 100%;
+    margin-top: 12px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 18px 24px;
+
+    color: var(--neutral-100, #FFF);
+    font-family: Urbanist;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 125% */
+    text-transform: uppercase;
+
+    border: none;
+
+    border-radius: 12px;
+    background: var(--primary-dark, #5144FF);
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition: all 400ms ease-in-out;
+    // width: 100%;
+    @media screen and (max-width: 480px) {
+        margin-top: 12px;  
+        width: 100%; 
+        justify-content: center;
+    }
+}
+  
+.contact-btn span {
+    position: relative;
+    z-index: 2;
+}
+    
+.contact-btn:hover {
+    background: var(--neutral-200, #FFF);
+    color: #000;
+}

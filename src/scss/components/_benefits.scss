@@ -1,0 +1,140 @@
+.benefits {
+    margin-top: 240px;
+    position: relative;
+    @media screen and (max-width: 480px) {
+        margin-top: 120px;   
+    }
+}
+
+.benefits-bg {
+    position: absolute;
+    top: -250px;
+    left: 0;
+    width: 100%;
+    max-height: 800px;
+    @media screen and (max-width: 480px) {
+        display: none;   
+    }
+}
+
+.benefits-bg-mobile {
+    display: none;
+    @media screen and (max-width: 480px) {
+        display: block;
+        position: absolute;
+        top: -600px;
+        left: 0;
+        width: 100%;  
+        z-index: -5; 
+    }
+}
+
+.benefits-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    @media screen and (max-width: 480px) {
+        flex-direction: column;   
+    }
+}
+
+.benefits-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 24px;
+    width: 32%;
+    @media screen and (max-width: 480px) {
+        width: 100%;   
+    }
+}
+
+.benefits-suptitle {
+    color: var(--neutral-500, #767676);
+    font-family: Manrope;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 20px */
+    text-transform: uppercase;
+}
+
+.benefits-title {
+    color: var(--neutral-100, #FFF);
+    font-family: Manrope;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    @media screen and (max-width: 480px) {
+        font-size: 48px;   
+    }
+}
+
+.benefits-item {
+    width: 32%;
+    border-radius: 26px;
+    border: 1px solid var(--neutral-700, #1F1F1F);
+    background: rgba(255, 255, 255, 0.08);
+    padding: 32px;
+    transition: all 400ms ease-in-out;
+    @media screen and (max-width: 480px) {
+        width: 100%;   
+        border: 1px solid var(--primary-gradient, #885FFF);
+        background: rgba(255, 255, 255, 0.12);
+    }
+}
+
+.benefits-item:hover {
+    border: 1px solid var(--primary-gradient, #885FFF);
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(5.5px);
+}
+
+.benefits-item-num {
+    color: var(--neutral-500, #767676);
+    font-family: Urbanist;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 33.6px */
+    letter-spacing: -0.24px;
+    transition: all 400ms ease-in-out;
+    @media screen and (max-width: 480px) {
+        color: var(--primary-light, #877EFF);
+    }
+}
+
+.benefits-item:hover .benefits-item-num {
+    color: var(--primary-light, #877EFF);
+}
+.benefits-item-title {
+    color: var(--neutral-200, #FFF);
+    font-family: Urbanist;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 33.6px */
+    letter-spacing: -0.24px;
+    text-transform: uppercase;
+    margin: 8px 0 20px 0;
+    border-bottom: 1px solid #1F1F1F;
+    padding-bottom: 20px;
+}
+
+.benefits-item-text {
+    color: var(--neutral-300, #C4C4C4);
+    font-family: Urbanist;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 22.4px */
+    transition: all 400ms ease-in-out;
+    @media screen and (max-width: 480px) {
+        color: #FFF;   
+    }
+}
+
+.benefits-item:hover .benefits-item-text {
+    color: #FFF;
+}

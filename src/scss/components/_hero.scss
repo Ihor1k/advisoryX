@@ -1,0 +1,205 @@
+.hero {
+    padding-top: 220px;
+    position: relative;
+    // height: 810px;
+    // background: url("../images/hero-bg.png") center / cover no-repeat;
+    @media screen and (max-width: 480px) {
+        padding-top: 110px;   
+    }
+}
+
+// .hero::before {
+//     content: "";
+//     position: absolute;
+//     inset: 0;
+//     z-index: 1;
+//     pointer-events: none;
+  
+//     background: linear-gradient(270deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
+//   }
+  
+
+// .overlay {
+//     content: "";
+//   position: absolute;
+//   inset: 0;
+//   z-index: 0;
+//   pointer-events: none;
+//   max-height: 810px;
+//   background:
+//   linear-gradient(270deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
+// }
+
+// .hero-bg {
+//     position: absolute;
+//     width: 100%;
+//     top: 0;    
+// }
+
+.hero-bg img {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.hero-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 24px;
+    @media screen and (max-width: 480px) {
+    width: 100%;
+    flex-direction: column;
+    }
+}
+
+.hero-title {
+    color: var(--neutral-100, #FFF);
+font-family: Manrope;
+font-size: 92px;
+font-style: normal;
+font-weight: 400;
+line-height: 104%;
+letter-spacing: -1.84px;
+text-transform: uppercase;
+max-width: 646px;
+width: 100%;
+// margin-bottom: 28px;
+
+@media screen and (max-width: 480px) {
+    font-size: 51px;  
+    letter-spacing: -1.02px;  
+    margin-bottom: 24px;   
+}
+}
+
+.hero-text {
+    color: var(--neutral-100, #FFF);
+font-family: Urbanist;
+font-size: 28px;
+font-style: normal;
+font-weight: 500;
+line-height: 135%; /* 37.8px */
+max-width: 642px;
+width: 100%;
+margin-bottom: 60px;
+@media screen and (max-width: 480px) {
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 480px) {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.hero-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 49%;
+  
+    padding: 18px 30px;
+  
+    color: #F7F7F7;
+    font-family: Urbanist;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 125% */
+    text-transform: uppercase;
+  
+    border: none;
+    cursor: pointer;
+  
+    border-radius: 12px;
+    background: var(--primary-dark, #5144FF);
+    overflow: hidden;
+  
+    transition: all 400ms ease-in-out;
+
+    @media screen and (max-width: 480px) {
+        width: 100%;  
+        margin-top: 36px;  
+    }   
+}
+
+.hero-button:hover {
+    background: #fff;
+    color: #000;
+}
+
+.hero-button span {
+    position: relative;
+    z-index: 2;
+  }
+  
+
+  .hero-button-services {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 49%;
+
+    padding: 18px 20px;
+
+    color: var(--neutral-100, #FFF);
+    font-family: Urbanist;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 125% */
+    text-transform: uppercase;
+
+    // border-radius: 12px;
+    cursor: pointer;
+
+    background: transparent;
+    border-radius: 12px;
+    border: 1px solid var(--neutral-600, #3F3F3F);
+    overflow: hidden;
+
+    transition: all 400ms ease-in-out;
+    @media screen and (max-width: 480px) {
+        width: 100%;   
+    }
+  }
+
+  .hero-button-services:hover {
+    border-radius: 12px;
+    border: 1px solid var(--primary-dark, #5144FF);
+    background: #171717;
+  }
+  
+  .hero-button-services span {
+    position: relative;
+    z-index: 2;
+  }
+/* білий фон для hover */
+// .hero-button::before {
+//     content: "";
+//     position: absolute;
+//     inset: 0;
+//     background: radial-gradient(897.55% 141.24% at 0.13% 100%, #73F 0%, #09BBFF 100%);
+//     opacity: 0;
+//     transition: all 600ms ease-in-out;
+// }
+
+/* hover */
+// .hero-button:hover::before {
+//     opacity: 1;
+// }
+

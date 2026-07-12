@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="./src/images/favicon.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AdvisoryX</title>
+    <link rel="stylesheet" href="./src/scss/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    /> -->
+  </head>
+  <body>
+    <div class="menu-overlay"></div>
+    <header class="header">
+      <div class="container">
+        <div class="header-inner">
+          <div class="header-logo">
+            <a href="/"
+              ><img
+                src="./src/images/header-logo.png"
+                width="184"
+                height="21"
+                alt="Logo"
+            /></a>
+          </div>
+          <div class="header-logo-mobile">
+            <a href="/"
+              ><img
+                src="./src/images/header-logo-mobile.png"
+                width="127"
+                height="15"
+                alt="Logo"
+            /></a>
+          </div>
+
+          <div class="burger">
+            <img src="./src/images/burger.svg" alt="" />
+          </div>
+
+          <div class="header-menu">
+            <div class="burger-close">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
+                  fill="#fff"
+                />
+              </svg>
+            </div>
+            <a href="#hero" class="header-link">Home</a>
+            <a href="#about" class="header-link">About</a>
+            <a href="#services" class="header-link">Services</a>
+            <a href="#process" class="header-link">Process</a>
+            <a href="#contact" class="header-link">Contact</a>
+          </div>
+
+          <!-- <div class="header-buttons mobile-visible">
+            <button class="header-button">
+              <span>Get Started</span>
+            </button>
+          </div> -->
+        </div>
+      </div>
+    </header>
+
+    <div class="popup-overlay" id="popup">
+      <div class="popup">
+        <div class="popup-block">
+          <div class="popup-inner">
+            <div class="popup-context">
+              <h3><span class="grey">Need Software or</span> IT Support for Your Business?</h3>
+              <p class="pop-text">
+                Get in touch to discuss software services, IT support, licensing, implementation, or custom development needs
+              </p>
+            </div>
+  
+            <form class="popup-form" id="joinForm">
+              <!-- <div class="form-field">
+                <label for="name">Full name*</label>
+                <input type="text" id="name" name="name" placeholder="Add your full name*" required />
+              </div> -->
+              <div class="form-field">
+                <!-- <label for="name">Company/Organization (optionaly)</label> -->
+                <input type="text" id="company" name="company" placeholder="Add company name*"/>
+              </div>
+              <div class="form-field">
+                <!-- <label for="name">Email adress*</label> -->
+                 <input type="email" id="email" name="email" placeholder="Add your Email adress*" required/>
+              </div>
+              <!-- <div class="form-field">
+                 <input type="text" id="interest" name="interest" placeholder="Service Interest"/>
+              </div> -->
+              <div class="form-field">
+                <input type="tel" id="phone" name="phone" placeholder="Add your phone number (optional)"/>
+              </div>
+              
+              <div class="form-field">
+                <!-- <label for="name">Message*</label> -->
+                <textarea id="message" name="message" placeholder="Your message" rows="3" required></textarea>
+              </div>
+              <div class="popup-wrapper">
+                <button type="submit" class="popup-btn">
+                  <span>Submit Request</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        
+ 
+        <span class="close-popup"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M1 13L13 1M1 1L13 13" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg></span>
+      </div>
+    </div>
+
+    <section id="hero" class="hero">
+      <div class="hero-bg">
+        <img src="./src/images/hero-bg.png" alt="">
+      </div>
+      <div class="container">
+        <div class="hero-inner">
+          <h1 class="hero-title"><span class="purple">Technology Built</span> for Business</h1>
+          <div class="hero-content">
+            <p class="hero-text">AdvisoryX helps companies access, implement, and manage software solutions that support daily operations, improve productivity, and make business processes more efficient</p>
+            <div class="hero-buttons">
+              <button class="hero-button">Get Started</button>
+              <a href="#services" class="hero-button-services">Our services</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <p class="about-suptext">Who We Are</p>
+        <h2 class="about-title"><span class="grey">About</span> AdvisoryX</h2>
+        <p class="about-text">Modern businesses depend on technology, but managing software, tools, and digital processes often becomes complicated as companies grow.</p>
+        <div class="about-list">
+          <div class="about-item">
+            <p class="about-item-num">001</p>
+            <p class="about-item-title">Practical technology</p>
+            <p class="about-item-text">We focus on software solutions that solve real business problems, improve daily operations, and create measurable value.</p>
+          </div>
+          <div class="about-item">
+            <p class="about-item-num">002</p>
+            <p class="about-item-title">Clear digital processes</p>
+            <p class="about-item-text">We help companies replace disconnected tools and manual workflows with more structured and efficient digital systems.</p>
+          </div>
+          <div class="about-item">
+            <p class="about-item-num">003</p>
+            <p class="about-item-title">Long-term support</p>
+            <p class="about-item-text">We support businesses beyond software selection by helping them adopt, manage, and improve their digital environment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="marquee">
+      <div class="marquee-track">
+        <span class="marquee-text">
+          SYSTEM OPTIMIZED <span class="gradient">/ SOFTWARE DEPLOY</span> / PROCESS AUTOMATED / BUSINESS CONNECTED / DATA SECURED /
+        </span>
+        <span class="marquee-text" aria-hidden="true">
+          SYSTEM OPTIMIZED <span class="gradient">/ SOFTWARE DEPLOY</span> / PROCESS AUTOMATED / BUSINESS CONNECTED / DATA SECURED /
+        </span>
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <div class="container">
+        <p class="services-suptext">Services</p>
+        <div class="services-content">
+          <h3 class="services-title"><span class="grey">Software and IT Services</span> Built Around Business Needs</h3>
+          <p class="services-text">AdvisoryX provides software and IT services for companies that need practical digital tools, reliable software access, and technical support. </p>
+        </div>
+        
+        
+
+      </div>
+
+      <div class="services-slider">
+        <div class="services-list" id="servicesSlider">
+          <article class="services-item">
+            <div class="services-item-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M2 12.0001L11.6422 16.8212C11.7734 16.8868 11.839 16.9196 11.9078 16.9325C11.9687 16.9439 12.0313 16.9439 12.0922 16.9325C12.161 16.9196 12.2266 16.8868 12.3578 16.8212L22 12.0001M2 17.0001L11.6422 21.8212C11.7734 21.8868 11.839 21.9196 11.9078 21.9325C11.9687 21.9439 12.0313 21.9439 12.0922 21.9325C12.161 21.9196 12.2266 21.8868 12.3578 21.8212L22 17.0001M2 7.00006L11.6422 2.17895C11.7734 2.11336 11.839 2.08056 11.9078 2.06766C11.9687 2.05622 12.0313 2.05622 12.0922 2.06766C12.161 2.08056 12.2266 2.11336 12.3578 2.17895L22 7.00006L12.3578 11.8212C12.2266 11.8868 12.161 11.9196 12.0922 11.9325C12.0313 11.9439 11.9687 11.9439 11.9078 11.9325C11.839 11.9196 11.7734 11.8868 11.6422 11.8212L2 7.00006Z" stroke="#767676" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+      
+            <p class="services-item-title">
+              Business Software Services
+            </p>
+      
+            <p class="services-item-text">
+              AdvisoryX helps companies access and use business software for operations, productivity, communication, reporting, workflow management, and internal organization.
+
+
+            </p>
+      
+            <p class="services-item-description">
+              We focus on software that solves real business tasks and helps teams work with more structure. This service is suitable for companies that need digital tools for everyday work and want a clear way to find the right solution.
+            </p>
+          </article>
+      
+          <article class="services-item">
+            <div class="services-item-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <path d="M6.25 3.25C6.25 1.86929 7.36929 0.75 8.75 0.75C10.1307 0.75 11.25 1.86929 11.25 3.25V4.75H12.25C13.6478 4.75 14.3467 4.75 14.8981 4.97836C15.6331 5.28284 16.2172 5.86687 16.5216 6.60195C16.75 7.15326 16.75 7.85218 16.75 9.25H18.25C19.6307 9.25 20.75 10.3693 20.75 11.75C20.75 13.1307 19.6307 14.25 18.25 14.25H16.75V15.95C16.75 17.6302 16.75 18.4702 16.423 19.112C16.1354 19.6765 15.6765 20.1354 15.112 20.423C14.4702 20.75 13.6302 20.75 11.95 20.75H11.25V19C11.25 17.7574 10.2426 16.75 9 16.75C7.75736 16.75 6.75 17.7574 6.75 19V20.75H5.55C3.86984 20.75 3.02976 20.75 2.38803 20.423C1.82354 20.1354 1.3646 19.6765 1.07698 19.112C0.75 18.4702 0.75 17.6302 0.75 15.95V14.25H2.25C3.63071 14.25 4.75 13.1307 4.75 11.75C4.75 10.3693 3.63071 9.25 2.25 9.25H0.75C0.75 7.85218 0.75 7.15326 0.978361 6.60195C1.28284 5.86687 1.86687 5.28284 2.60195 4.97836C3.15326 4.75 3.85218 4.75 5.25 4.75H6.25V3.25Z" stroke="#767676" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+      
+            <p class="services-item-title">
+              Custom Software Development
+            </p>
+      
+            <p class="services-item-text">
+              Some businesses need software built around their specific processes. AdvisoryX supports custom software development for companies that require tailored digital tools, internal platforms, workflow systems, integrations, or specialized functionality.
+
+            </p>
+      
+            <p class="services-item-description">
+              Custom development is useful when ready-made software does not fully match business needs. AdvisoryX helps create digital solutions that reflect how the company actually works.
+            </p>
+          </article>
+      
+          <article class="services-item">
+            <div class="services-item-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <path d="M8 11L10 13L14.5 8.5M16.9012 3.99851C17.1071 4.49653 17.5024 4.8924 18.0001 5.09907L19.7452 5.82198C20.2433 6.02828 20.639 6.42399 20.8453 6.92206C21.0516 7.42012 21.0516 7.97974 20.8453 8.47781L20.1229 10.2218C19.9165 10.7201 19.9162 11.2803 20.1236 11.7783L20.8447 13.5218C20.9469 13.7685 20.9996 14.0329 20.9996 14.2999C20.9997 14.567 20.9471 14.8314 20.8449 15.0781C20.7427 15.3249 20.5929 15.549 20.4041 15.7378C20.2152 15.9266 19.991 16.0764 19.7443 16.1785L18.0004 16.9009C17.5023 17.1068 17.1065 17.5021 16.8998 17.9998L16.1769 19.745C15.9706 20.2431 15.575 20.6388 15.0769 20.8451C14.5789 21.0514 14.0193 21.0514 13.5212 20.8451L11.7773 20.1227C11.2792 19.9169 10.7198 19.9173 10.2221 20.1239L8.47689 20.8458C7.97912 21.0516 7.42001 21.0514 6.92237 20.8453C6.42473 20.6391 6.02925 20.2439 5.82281 19.7464L5.09972 18.0006C4.8938 17.5026 4.49854 17.1067 4.00085 16.9L2.25566 16.1771C1.75783 15.9709 1.36226 15.5754 1.15588 15.0777C0.949508 14.5799 0.949228 14.0205 1.1551 13.5225L1.87746 11.7786C2.08325 11.2805 2.08283 10.7211 1.8763 10.2233L1.15497 8.47678C1.0527 8.2301 1.00004 7.96568 1 7.69863C0.999957 7.43159 1.05253 7.16715 1.15472 6.92043C1.25691 6.67372 1.40671 6.44955 1.59557 6.26075C1.78442 6.07195 2.00862 5.92222 2.25537 5.8201L3.9993 5.09772C4.49687 4.89197 4.89248 4.4972 5.0993 4.00006L5.82218 2.25481C6.02848 1.75674 6.42418 1.36103 6.92222 1.15473C7.42027 0.948424 7.97987 0.948424 8.47792 1.15473L10.2218 1.87712C10.7199 2.08291 11.2793 2.08249 11.7771 1.87595L13.523 1.15585C14.021 0.94966 14.5804 0.949702 15.0784 1.15597C15.5763 1.36223 15.972 1.75783 16.1783 2.25576L16.9014 4.00153L16.9012 3.99851Z" stroke="#767676" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+      
+            <p class="services-item-title">
+              Software Resale and Licensing
+            </p>
+      
+            <p class="services-item-text">
+              AdvisoryX provides software resale and licensing support for businesses that need reliable access to software products. Many companies need software but do not always have the time or internal expertise to compare options or manage licensing.
+
+            </p>
+      
+            <p class="services-item-description">
+              We help businesses obtain suitable software and understand how it can fit into their operations. This makes software adoption more direct, organized, and practical.
+            </p>
+          </article>
+      
+          <article class="services-item">
+            <div class="services-item-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M0.75 0.75V10.95C0.75 12.6302 0.75 13.4702 1.07698 14.112C1.3646 14.6765 1.82354 15.1354 2.38803 15.423C3.02976 15.75 3.86984 15.75 5.55 15.75H12.75M12.75 15.75C12.75 17.4069 14.0931 18.75 15.75 18.75C17.4069 18.75 18.75 17.4069 18.75 15.75C18.75 14.0931 17.4069 12.75 15.75 12.75C14.0931 12.75 12.75 14.0931 12.75 15.75ZM0.75 5.75L12.75 5.75M12.75 5.75C12.75 7.40686 14.0931 8.75 15.75 8.75C17.4069 8.75 18.75 7.40685 18.75 5.75C18.75 4.09315 17.4069 2.75 15.75 2.75C14.0931 2.75 12.75 4.09315 12.75 5.75Z" stroke="#767676" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+      
+            <p class="services-item-title">
+              Digital Workflow Support
+            </p>
+      
+            <p class="services-item-text">
+              AdvisoryX helps companies improve digital workflows by identifying where software can reduce manual work, organize information, and support smoother operations.
+
+
+            </p>
+      
+            <p class="services-item-description">
+              
+This service is useful for businesses that use disconnected tools, outdated processes, or manual systems that slow down daily work.
+            </p>
+          </article>
+      
+          <article class="services-item">
+            <div class="services-item-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <path d="M11.7938 9.7576L2.29383 19.2576M12.8123 2.29607C14.0303 3.10427 15.201 4.0571 16.295 5.15109C17.3984 6.25452 18.3582 7.436 19.1709 8.66535M8.04879 6.65374L5.17392 5.69545C4.84284 5.58509 4.47817 5.65532 4.21175 5.88075L1.35459 8.29834C0.769668 8.79328 0.935847 9.73518 1.65483 10.0001L4.36203 10.9975M10.4749 17.1101L11.4723 19.8173C11.7372 20.5363 12.6791 20.7025 13.174 20.1176L15.5916 17.2604C15.817 16.994 15.8872 16.6293 15.7769 16.2982L14.8186 13.4234M18.1424 1.02832L13.2359 1.84607C12.7061 1.93437 12.2202 2.19478 11.8533 2.58701L5.24019 9.65615C3.52604 11.4885 3.57371 14.3501 5.34797 16.1244C7.12222 17.8986 9.98379 17.9463 11.8162 16.2321L18.8853 9.61906C19.2775 9.25213 19.538 8.76618 19.6263 8.23638L20.444 3.32991C20.6696 1.97627 19.4961 0.802718 18.1424 1.02832Z" stroke="#767676" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+      
+            <p class="services-item-title">
+              Software Implementation and Setup
+            </p>
+      
+            <p class="services-item-text">
+              Software creates value only when it is properly implemented. AdvisoryX helps companies set up, configure, and prepare software for practical use inside the business.
+
+
+            </p>
+      
+            <p class="services-item-description">
+              This can include user access, basic configuration, workflow alignment, and setup support. The goal is to make the software easier to use and useful from the beginning.
+            </p>
+          </article>
+      
+          <article class="services-item">
+            <div class="services-item-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="19" viewBox="0 0 21 19" fill="none">
+                <path d="M19.608 9.5C19.608 14.1944 15.8024 18 11.108 18C10.0312 18 9.00123 17.7998 8.05318 17.4345C7.87984 17.3678 7.79318 17.3344 7.72426 17.3185C7.65647 17.3029 7.6074 17.2963 7.53788 17.2937C7.46721 17.291 7.38967 17.299 7.23459 17.315L2.11356 17.8444C1.62532 17.8948 1.3812 17.9201 1.2372 17.8322C1.11177 17.7557 1.02634 17.6279 1.0036 17.4828C0.977493 17.3161 1.09415 17.1002 1.32746 16.6684L2.96312 13.6408C3.09782 13.3915 3.16517 13.2668 3.19568 13.1469C3.2258 13.0286 3.23309 12.9432 3.22345 12.8214C3.21369 12.6981 3.15959 12.5376 3.05139 12.2166C2.76387 11.3636 2.60802 10.45 2.60802 9.5C2.60802 4.80558 6.4136 1 11.108 1C15.8024 1 19.608 4.80558 19.608 9.5Z" stroke="#767676" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+      
+            <p class="services-item-title">
+              IT and Software Support
+            </p>
+      
+            <p class="services-item-text">
+              AdvisoryX provides support for software-related questions, setup issues, user access, technical adjustments, and ongoing digital operations.
+
+
+            </p>
+      
+            <p class="services-item-description">
+              Businesses can rely on this support when they need help managing software tools or solving practical technology problems.
+            </p>
+          </article>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="who">
+      <div class="container">
+        <p class="who-suptitle">Who We Work With</p>
+        <div class="who-content">
+          <h3 class="who-title"><span class="grey">For Businesses</span> That Need Better Software and Digital Tools</h3>
+          <p class="who-text">AdvisoryX works with companies that want to improve how they use technology. Our clients may need new software, support with existing tools, implementation assistance, or custom software development for specific business needs.</p>
+        </div>
+
+        <div class="who-inner">
+          <div class="video">
+            <video autoplay muted loop playsinline preload="auto" style="max-height: 556px;">
+              <source src="./src/videos/who-video.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="who-accordion">
+
+            <article class="who-item is-active">
+              <button class="who-trigger" type="button" aria-expanded="true">
+                <span class="who-number">001</span>
+                <span class="who-name">SMALL AND MEDIUM BUSINESSES</span>
+              </button>
+          
+              <div class="who-context">
+                <div class="who-context-inner">
+                  <p>
+                    We support businesses that want to move away from manual processes, disconnected tools, or inefficient systems. With practical software and IT support, AdvisoryX helps companies build a more organized digital environment
+                  </p>
+                </div>
+              </div>
+            </article>
+          
+            <article class="who-item">
+              <button class="who-trigger" type="button" aria-expanded="false">
+                <span class="who-number">002</span>
+                <span class="who-name">GROWING COMPANIES</span>
+              </button>
+          
+              <div class="who-context">
+                <div class="who-context-inner">
+                  <p>
+                    As companies grow, their software needs become more complex. AdvisoryX supports growing businesses with software access, licensing, implementation, and development support
+                  </p>
+                </div>
+              </div>
+            </article>
+          
+            <article class="who-item">
+              <button class="who-trigger" type="button" aria-expanded="false">
+                <span class="who-number">003</span>
+                <span class="who-name">Companies Improving Internal Processes</span>
+              </button>
+          
+              <div class="who-context">
+                <div class="who-context-inner">
+                  <p>
+                    Businesses using outdated systems or manual workflows can benefit from better digital tools. AdvisoryX helps identify where software can improve processes and make daily operations more efficient
+                  </p>
+                </div>
+              </div>
+            </article>
+          
+            <article class="who-item">
+              <button class="who-trigger" type="button" aria-expanded="false">
+                <span class="who-number">004</span>
+                <span class="who-name">Businesses Looking for Custom Software</span>
+              </button>
+          
+              <div class="who-context">
+                <div class="who-context-inner">
+                  <p>
+                    Some companies need tools built specifically for their operations. AdvisoryX supports custom software development for businesses that require tailored systems, internal platforms, or specialized functionality
+                  </p>
+                </div>
+              </div>
+            </article>
+          
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="process">
+      <div class="container">
+        <div class="process-block">
+    
+          <div class="process-content">
+            <h3 class="process-title">
+              A Clear Process
+              <span class="grey">for Delivering Software Services</span>
+            </h3>
+    
+            <p class="process-text">
+              AdvisoryX follows a practical process that helps businesses move
+              from software needs to working solutions. Each step is focused on
+              keeping technology aligned with real business goals
+            </p>
+          </div>
+    
+          <!-- Add this part -->
+          <div class="process-timeline">
+            <div class="process-timeline-track">
+    
+              <button class="process-step-button is-active" type="button">
+                <span>Understand the Need</span>
+                <span class="process-dot"></span>
+              </button>
+    
+              <button class="process-step-button" type="button">
+                <span>Identify the Right Service</span>
+                <span class="process-dot"></span>
+              </button>
+    
+              <button class="process-step-button" type="button">
+                <span>Set Up and Implement</span>
+                <span class="process-dot"></span>
+              </button>
+    
+              <button class="process-step-button" type="button">
+                <span>Support and Improve</span>
+                <span class="process-dot"></span>
+              </button>
+    
+            </div>
+    
+            <div class="process-steps-content">
+    
+              <article class="process-step-content is-active">
+                <h4>Discover Business Needs</h4>
+                <p>
+                  We begin by understanding what the business needs to improve, solve, or support. This includes current workflows, existing tools, operational challenges, and the expected result from the software or IT service
+                </p>
+              </article>
+    
+              <article class="process-step-content">
+                <h4>Find the Right Solution</h4>
+                <p>
+                  After understanding the need, AdvisoryX helps identify the most suitable service or software approach. This may include software resale, licensing, setup, implementation or technical support
+                </p>
+              </article>
+    
+              <article class="process-step-content">
+                <h4>Bring Solutions to Life</h4>
+                <p>
+                  Once the direction is clear, we support the setup and implementation process. The focus is on making software practical, usable, and connected to the company’s daily operations
+                </p>
+              </article>
+    
+              <article class="process-step-content">
+                <h4>Keep Systems Evolving</h4>
+                <p>
+                  After implementation, AdvisoryX can continue supporting the business with software assistance, technical questions, updates, improvements, and further development when needed
+                </p>
+              </article>
+    
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <img class="benefits-bg" src="./src/images/benefits-bg.jpg" alt="">
+      <img src="./src/images/benefits-bg-mobile.png" alt="" class="benefits-bg-mobile">
+      <div class="container">
+        <div class="benefits-list">
+          <div class="benefits-content">
+            <p class="benefits-suptitle">Benefits</p>
+            <h4 class="benefits-title"><span class="grey">Why</span> Businesses Choose <span class="grey">AdvisoryX</span></h4>
+          </div>
+          <div class="benefits-item">
+            <p class="benefits-item-num">001</p>
+            <p class="benefits-item-title">Practical Software Services</p>
+            <p class="benefits-item-text">AdvisoryX focuses on software and IT services that serve a real business purpose. We help companies access and use tools that improve operations, productivity, and internal structure</p>
+          </div>
+          <div class="benefits-item">
+            <p class="benefits-item-num">002</p>
+            <p class="benefits-item-title">Software and 
+              IT Expertise</p>
+            <p class="benefits-item-text">The company combines software resale, IT support, and development capabilities. This allows AdvisoryX to support businesses not only with access to software</p>
+          </div>
+          <div class="benefits-item">
+            <p class="benefits-item-num">003</p>
+            <p class="benefits-item-title">Flexible 
+              Support</p>
+            <p class="benefits-item-text">Different companies need different types of technology support. AdvisoryX can help with licensing, implementation, custom development or workflow improvement</p>
+          </div>
+          <div class="benefits-item">
+            <p class="benefits-item-num">004</p>
+            <p class="benefits-item-title">Better Digital 
+              Organization</p>
+            <p class="benefits-item-text">The right software can help companies organize information, manage tasks, reduce manual work, and improve internal processes. AdvisoryX helps businesses build a more reliable digital setup</p>
+          </div>
+          <div class="benefits-item">
+            <p class="benefits-item-num">005</p>
+            <p class="benefits-item-title">Business-Focused 
+              Approach</p>
+            <p class="benefits-item-text">AdvisoryX connects technology with practical business needs. The focus is not only on software itself, but on how it supports the company’s work, goals, and long-term efficiency</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="video">
+        <video autoplay muted loop playsinline preload="auto" style="max-height: 900px;">
+          <source src="./src/videos/contact-video.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="container">
+        
+        
+          <div class="contact-block">
+            <div class="contact-inner">
+              <div class="contact-context">
+                <h3><span class="grey">Need Software or</span> IT Support for Your Business?</h3>
+                <p class="pop-text">
+                  Get in touch to discuss software services, IT support, licensing, implementation, or custom development needs
+                </p>
+              </div>
+    
+              <form class="contact-form" id="joinForm">
+                <!-- <div class="form-field">
+                  <label for="name">Full name*</label>
+                  <input type="text" id="name" name="name" placeholder="Add your full name*" required />
+                </div> -->
+                <div class="form-field">
+                  <!-- <label for="name">Company/Organization (optionaly)</label> -->
+                  <input type="text" id="company" name="company" placeholder="Add company name*"/>
+                </div>
+                <div class="form-field">
+                  <!-- <label for="name">Email adress*</label> -->
+                   <input type="email" id="email" name="email" placeholder="Add your Email adress*" required/>
+                </div>
+                <!-- <div class="form-field">
+                   <input type="text" id="interest" name="interest" placeholder="Service Interest"/>
+                </div> -->
+                <div class="form-field">
+                  <input type="tel" id="phone" name="phone" placeholder="Add your phone number (optional)"/>
+                </div>
+                
+                <div class="form-field">
+                  <!-- <label for="name">Message*</label> -->
+                  <textarea id="message" name="message" placeholder="Your message" rows="3" required></textarea>
+                </div>
+                <div class="contact-wrapper">
+                  <button type="submit" class="contact-btn">
+                    <span>Submit Request</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        
+      </div>
+    </section>
+
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-row">
+          <img src="./src/images/footer-logo.png" width="184" height="21" alt="" class="footer-logo">
+          <div class="footer-menu">
+            <a href="#hero" class="footer-link">Home</a>
+            <a href="#about" class="footer-link">About</a>
+            <a href="#services" class="footer-link">Services</a>
+            <a href="#process" class="footer-link">Process</a>
+            <a href="#contact" class="footer-link">Contact</a>
+          </div>
+        </div>
+        <div class="footer-row">
+          <div class="footer-content">
+            <p class="footer-adress-suptext">Adress:</p>
+            <p class="footer-adress">Harju maakond, Tallinn, Nõmme linnaosa, Rännaku pst 12, 10917 </p>
+          </div>
+          <div class="footer-content">
+            <p class="footer-adress-suptext">Email:</p>
+            <p class="footer-email">info@advisoryxit.com </p>
+          </div>
+        </div>
+        <div class="footer-row">
+          <p class="copyright">© 2026 AdvisoryX OÜ</p>
+          <a href="./src/politic.html" class="privacy">Privacy Policy. All rights reserved.</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script type="module" src="./src/main.js"></script>
+    <!-- <script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script> -->
+  </body>
+</html>

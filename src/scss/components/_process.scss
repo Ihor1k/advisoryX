@@ -1,0 +1,429 @@
+/*
+The additional section height creates enough scrolling distance
+for all four timeline stages.
+*/
+.process {
+    position: relative;
+    overflow: visible;
+    margin-top: 250px;
+    @media screen and (max-width: 480px) {
+        margin-top: 100px;   
+    }
+}
+
+.process > .container {
+    position: relative;
+    min-height: 320vh;
+    overflow: visible;
+}
+
+.process-block {
+    position: sticky;
+    top: 70px;
+
+    padding: clamp(24px, 3vw, 44px) clamp(20px, 2.5vw, 32px);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 22px;
+    background: #151515;
+}
+
+.process-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.process-title {
+    color: var(--neutral-200, #FFF);
+    font-family: Manrope;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 56px */
+    @media screen and (max-width: 480px) {
+        font-size: 40px;
+    }
+}
+
+.process-text {
+    color: var(--neutral-300, #C4C4C4);
+    font-family: Urbanist;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 33.6px */
+    letter-spacing: -0.24px;
+    max-width: 612px;
+    @media screen and (max-width: 480px) {
+        font-size: 20px;
+        margin-top: 10px;   
+    }
+}
+
+.process-timeline {
+    margin-top: clamp(50px, 7vw, 90px);
+}
+
+/* Timeline line */
+
+.process-timeline-track {
+    --timeline-progress: 0%;
+
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+/* Default line */
+
+.process-timeline-track::before {
+    content: "";
+    position: absolute;
+    left: 3px;
+    right: 3px;
+    bottom: 1px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.14);
+}
+
+/* Active line */
+
+.process-timeline-track::after {
+    content: "";
+    position: absolute;
+    left: 3px;
+    bottom: 1px;
+    width: var(--timeline-progress);
+    height: 1px;
+    background: #8d75ff;
+    transition: width 0.55s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.process-step-button {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+    padding: 0 0 1px;
+    border: 0;
+    background: transparent;
+    color: var(--neutral-500, #767676);
+    font-family: Urbanist;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 20px */
+    text-align: left;
+    cursor: pointer;
+    transition: color 0.4s ease;
+    @media screen and (max-width: 480px) {
+        font-size: 16px;   
+    }
+}
+
+.process-step-button.is-active {
+    color: #8d75ff;
+}
+
+.process-dot {
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #4b4b4b;
+    transform: translateY(3px);
+    transition:
+        background 0.4s ease,
+        box-shadow 0.4s ease,
+        transform 0.4s ease;
+}
+
+.process-step-button.is-complete .process-dot {
+    background: #8d75ff;
+}
+
+.process-step-button.is-active .process-dot {
+    background: #8d75ff;
+    box-shadow:
+        0 0 0 2px #151515,
+        0 0 0 3px #8d75ff;
+    transform: translateY(3px) scale(1.08);
+}
+
+/* Bottom content */
+
+.process-steps-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(24px, 3vw, 48px);
+    margin-top: 36px;
+}
+
+.process-step-content {
+    opacity: 0.38;
+    transform: translateY(10px);
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+}
+
+.process-step-content.is-active,
+.process-step-content.is-complete {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.process-step-content h4 {
+    max-width: 297px;
+    // min-height: 54px;
+    margin: 0 0 20px;
+    color: var(--neutral-200, #FFF);
+    font-family: Urbanist;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 140%; /* 36.4px */
+    text-transform: uppercase;
+    @media screen and (max-width: 480px) {
+        font-size: 18px;   
+    }
+}
+
+.process-step-content p {
+    color: var(--neutral-500, #767676);
+    font-family: Urbanist;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 22.4px */
+    max-width: 297px;
+    width: 100%;
+}
+
+.process-step-content.is-active p,
+.process-step-content.is-complete p {
+    color: #C4C4C4;
+}
+
+/* Tablet and mobile */
+
+@media (max-width: 900px) {
+    /*
+    Scroll distance for the four stages.
+    The direct parent must be tall because it contains
+    the sticky .process-block.
+    */
+    .process {
+        position: relative;
+        min-height: auto;
+        overflow: visible;
+    }
+
+    .process > .container {
+        position: relative;
+        min-height: 400vh;
+        padding-left: 8px;
+        padding-right: 8px;
+        overflow: visible;
+    }
+
+    /*
+    Sticky mobile card
+    */
+    .process-block {
+        position: sticky;
+        top: 50px;
+
+        width: 100%;
+        padding: 18px 14px 22px;
+
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 16px;
+        background: #151515;
+    }
+
+    /*
+    Header
+    */
+    .process-content {
+        display: block;
+    }
+
+    /*
+    Vertical timeline wrapper
+    */
+    .process-timeline {
+        position: relative;
+
+        display: grid;
+        grid-template-columns: 16px minmax(0, 1fr);
+        column-gap: 12px;
+
+        margin-top: 28px;
+        padding-bottom: 4px;
+    }
+
+    /*
+    Vertical grey line
+    */
+    .process-timeline::before {
+        content: "";
+        position: absolute;
+
+        top: 4px;
+        bottom: 8px;
+        left: 3px;
+
+        width: 1px;
+        background: rgba(255, 255, 255, 0.16);
+    }
+
+    /*
+    Remove the desktop horizontal timeline
+    */
+    .process-timeline-track::before,
+    .process-timeline-track::after {
+        display: none;
+    }
+
+    /*
+    Allow the buttons and descriptions to participate
+    in the same mobile grid.
+    */
+    .process-timeline-track,
+    .process-steps-content {
+        display: contents;
+    }
+
+    /*
+    Timeline labels
+    */
+    .process-step-button {
+        position: relative;
+        z-index: 2;
+
+        grid-column: 2;
+
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0 0 9px;
+
+        border: 0;
+        background: transparent;
+
+        text-align: left;
+
+        transition: color 0.35s ease;
+    }
+
+    /*
+    Place each label before its corresponding description
+    */
+    .process-step-button:nth-child(1) {
+        grid-row: 1;
+    }
+
+    .process-step-button:nth-child(2) {
+        grid-row: 3;
+    }
+
+    .process-step-button:nth-child(3) {
+        grid-row: 5;
+    }
+
+    .process-step-button:nth-child(4) {
+        grid-row: 7;
+    }
+
+    /*
+    Timeline dots
+    */
+    .process-dot {
+        position: absolute;
+        top: 2px;
+        left: -27px;
+
+        display: block;
+        width: 5px;
+        height: 5px;
+
+        border: 0;
+        border-radius: 50%;
+        background: #444;
+
+        transform: none;
+
+        transition:
+            background 0.35s ease,
+            box-shadow 0.35s ease,
+            transform 0.35s ease;
+    }
+
+    .process-step-button.is-active {
+        color: #8d75ff;
+    }
+
+    .process-step-button.is-active .process-dot {
+        background: #8d75ff;
+
+        box-shadow:
+            0 0 0 2px #151515,
+            0 0 0 3px #8d75ff;
+
+        transform: scale(1.1);
+    }
+
+    .process-step-button.is-complete .process-dot {
+        background: #555;
+    }
+
+    /*
+    Description cards
+    */
+    .process-step-content {
+        grid-column: 2;
+
+        display: block !important;
+        opacity: 1;
+        transform: none;
+
+        margin: 0;
+        padding: 0 0 19px;
+    }
+
+    .process-step-content:nth-child(1) {
+        grid-row: 2;
+    }
+
+    .process-step-content:nth-child(2) {
+        grid-row: 4;
+    }
+
+    .process-step-content:nth-child(3) {
+        grid-row: 6;
+    }
+
+    .process-step-content:nth-child(4) {
+        grid-row: 8;
+        padding-bottom: 0;
+    }
+
+    /*
+    Do not hide inactive descriptions on mobile.
+    Only the timeline label and dot change.
+    */
+    .process-step-content.is-active,
+    .process-step-content.is-complete {
+        display: block !important;
+        opacity: 1;
+        transform: none;
+    }
+
+    .process-step-content.is-active p,
+    .process-step-content.is-complete p {
+        color: rgba(255, 255, 255, 0.52);
+    }
+}
