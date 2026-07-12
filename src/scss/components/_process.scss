@@ -223,7 +223,7 @@ for all four timeline stages.
 
     .process > .container {
         position: relative;
-        min-height: 400vh;
+        min-height: 200vh;
         padding-left: 8px;
         padding-right: 8px;
         overflow: visible;
@@ -234,7 +234,7 @@ for all four timeline stages.
     */
     .process-block {
         position: sticky;
-        top: 50px;
+        top: -240px;
 
         width: 100%;
         padding: 18px 14px 22px;
